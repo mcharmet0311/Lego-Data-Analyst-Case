@@ -1,0 +1,13 @@
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+
+# Local only: the original case brief is not published
+Data_case.pdf
+
+# Scratch output of scripts/clean_excels.py (re-creatable)
+output/

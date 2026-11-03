@@ -1,0 +1,32 @@
+[
+  {
+    "id": "q1",
+    "title": "Q1 · Key insights",
+    "question": "What are 3 key insights or patterns you observe in the data?",
+    "text": "1. v2.3 is where it breaks. Errors per session tripled from 0.16 on v2.1 to 0.51 on v2.3. 53 of 90 unique tickets were raised on v2.3, most of them bugs and crashes.\n\n2. Power users are leaving. They account for 63% of all sessions, but their monthly sessions fell 27% (388 → 284). Their average satisfaction is 1.5/5 and all 8 say they would not recommend the tool.\n\n3. Surprise: new users are thriving, occasional users are quietly fading. New users went from 38 to 170 sessions a month with 4.5/5 satisfaction, and they mostly ask for training. Occasional users dropped 53% and have the highest v2.3 error rate (0.83 per session), yet they raise few tickets."
+  },
+  {
+    "id": "q2",
+    "title": "Q2 · Questions for the PM",
+    "question": "What 2-3 questions would you ask the Product Manager or users to better understand the situation?",
+    "text": "1. What changed in v2.2 and v2.3? Every user moved version in the same month, so the version effect can't be separated from time. Release notes would tie the crash spike to specific changes.\n\n2. What counts as an 'error', and what do Type_A and dept_code mean? We need to know whether an error means a crash or a warning before ranking problems. dept_code could reveal teams that are hit harder.\n\n3. How was the survey run? The brief says a 40% response rate, but the data has 48 responses from all 25 users. Some users answered 3 times. This decides whether the scores are representative."
+  },
+  {
+    "id": "q3",
+    "title": "Q3 · Data quality",
+    "question": "What 1-2 data quality issues or gaps did you identify?",
+    "text": "1. Duplicates and an outlier inflate the problem. Five tickets (T091–T095) are re-entered copies. One user logged 520 errors in a month, against 3–13 in other months, which alone doubles v2.3's average (18.9 → 8.7 errors per user-month). Both are flagged and excluded here.\n\n2. The decline can't actually be measured. The survey only ran from 15 March to 9 April, with no earlier baseline, and usage ends in March while tickets run into April. Mixed date formats and inconsistent capitalisation suggest manual entry."
+  },
+  {
+    "id": "q4",
+    "title": "Q4 · Biggest risk",
+    "question": "What is the biggest risk you see in this data?",
+    "text": "Business risk: losing the power users, the people who build the sets. None of the 45 v2.3 bug, performance or feature tickets has been resolved; only how-to questions get closed. Power users are on their fourth crash ticket and asking to \"roll back to v2.2\".\n\nThis is easy to miss because the average resolution time looks better on v2.3 (1.5 days vs 3.2). That is only because the easy tickets get closed.\n\nRecommendation: stabilise v2.3 before building new features."
+  },
+  {
+    "id": "q5",
+    "title": "Q5 · Visualization",
+    "question": "Sketch one simple visualization that could help communicate your findings.",
+    "text": "Chart: sessions per month and errors per session, one line per user role, with the months each tool version was live shaded (top two charts on the dashboard).\n\nWho it's for: the Product Manager and leadership deciding what to build next.\n\nWhy this format: the story is a change over time that lines up with a release. Line charts make the turning point visible at a glance, the version shading links it to v2.3, and splitting by role shows that the people doing most of the work are the ones being hit. The rest of the dashboard lets them drill down from that headline to individual designers and their tickets."
+  }
+]
